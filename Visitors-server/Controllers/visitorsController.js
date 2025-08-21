@@ -1,10 +1,11 @@
 import Visitor from "../Models/Visitors.js";
 
 export const checkIn = async (req, res) => {  
-    const { name, mobile, purpose } = req.body;
+    const { name, mobile, purpose ,office} = req.body;
+    
 
-    if (!name || !mobile || !purpose) {
-      return res.status(400).json({ success: false, message: 'Name, mobile, and purpose are required', });
+    if (!name || !mobile || !purpose || !office) {
+      return res.status(400).json({ success: false, message: 'Name, mobile, purpose, and office are required' });
     }
     const existingVisitor = await Visitor.findOne({ mobile, checkOutTime: { $exists: false }, });
     if (existingVisitor) {
@@ -21,7 +22,6 @@ export const checkIn = async (req, res) => {
     await visitor.save();
     return res.status(201).json({ success: true, message: 'Visitor checked in successfully', data: visitor, });
 };
-
 
 //CheckOut
 export const checkOut = async (req, res) => {

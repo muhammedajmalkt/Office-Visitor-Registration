@@ -7,7 +7,8 @@ const Settings = () => {
       animate={{ opacity: 1 }}
       className="space-y-8"
     >
-      <h2 className="text-3xl font-bold text-gray-900">Settings</h2>
+      <h2 className="text-3xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent"> Settings  </h2>
+
       <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">System Settings</h3>
         <p className="text-gray-600">Settings content will go here...</p>

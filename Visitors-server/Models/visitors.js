@@ -9,10 +9,12 @@ const visitorSchema = new mongoose.Schema({
     address: { type: String, trim: true, maxlength: [500, 'Address cannot exceed 500 characters'] },
     designation: { type: String, trim: true, maxlength: [100, 'Designation cannot exceed 100 characters'] },
     imageUrl: { type: String, trim: true },
+    office: { type: String, required: [true, 'Office is required'] },
     checkInTime: { type: Date, default: Date.now },
     checkOutTime: { type: Date },
 }, { timestamps: true });
 
 const Visitor = mongoose.model("visitor", visitorSchema)
 export default Visitor
+
 

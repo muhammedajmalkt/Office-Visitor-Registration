@@ -63,10 +63,10 @@ const handleSubmit = async (e) => {
         transition={{ duration: 0.5 }}
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-white to-gray-100 text-white p-5 flex flex-col items-center">
-          <img src={logoImage} alt="Logo" className="h-20 mb-3 rounded-lg shadow-lg" />
+        <div className=" text-white p-5 flex flex-col items-center">
+          <img src={logoImage} alt="Logo" className="h-20 mb-3 " />
           <h1 className="text-2xl sm:text-3xl font-bold text-center tracking-wide text-blue-900">YES INDIA FOUNDATION</h1>
-          <h2 className="text-xl sm:text-2xl font-bold text-center tracking-wide text-blue-900">Delhi Office</h2>
+          {/* <h2 className="text-xl sm:text-2xl font-bold text-center tracking-wide text-blue-900">Delhi Office</h2> */}
           <p className="text-base sm:text-lg font-medium text-gray-600">Visitor Check-Out</p>
         </div>
 
@@ -92,15 +92,16 @@ const handleSubmit = async (e) => {
           // Form View
           <form onSubmit={handleSubmit} className="p-6">
             <p className="text-center text-gray-700 mb-6 font-medium">Enter your mobile number to check out</p>
-            <div className="mb-4">
+            <div className="mb-4 py-5">
               <label className=" text-gray-700 font-medium mb-2 flex items-center">
                 <Phone className="mr-2 text-blue-700" /> Mobile Number
               </label>
               <input
                 type="tel"
+                name='mobile'
                 value={mobile}
                 onChange={handleMobileChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none text-black focus:ring-2 focus:ring-blue-500 shadow-sm text-lg"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none text-black focus:ring-1 focus:ring-blue-800 shadow-sm text-lg"
                 placeholder="Enter 10-digit mobile number"
                 required
                 disabled={loading}
