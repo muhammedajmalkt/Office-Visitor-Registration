@@ -3,8 +3,8 @@ import jwt from "jsonwebtoken"
 const verifyToken = (req,res,next )=>{
     const {token} = req.cookies    
     if(!token){
-        return res.status(401).json({success:false,message:"Token required"})
-    }
+        return res.status(401).json({success:false,message:"Token required or Expired"})
+    }    
 
     jwt.verify(token , process.env.JWT_SECRET,(error,decoded)=>{
         if(error){

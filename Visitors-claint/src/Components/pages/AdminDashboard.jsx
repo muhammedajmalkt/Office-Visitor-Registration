@@ -292,11 +292,11 @@ const AdminDashboard = () => {
           timer: 1500,
           showConfirmButton: false,
         });
-      } catch (error) {
+      } catch (error) {        
         MySwal.fire({
           icon: 'error',
           title: 'Error',
-          text: 'Failed to update ID information',
+          text: error.response?.data?.message || 'Failed to update ID information',
         });
       }
     }
