@@ -39,11 +39,15 @@ const CheckIn = () => {
 
   //========= enter office name ==========
   const offices = [
-    { value: "delhi", label: "Delhi Office" },
-    { value: "mumbai", label: "Mumbai Office" },
-    { value: "bengaluru", label: "Bengaluru Office" },
-    { value: "chennai", label: "Chennai Office" },
-    { value: "kolkata", label: "Kolkata Office" },
+    { value: "delhi", label: "Delhi " },
+    { value: "mumbai", label: "Mumbai " },
+    { value: "bengaluru", label: "Bengaluru " },
+    { value: "chennai", label: "Chennai " },
+    { value: "kolkata", label: "Kolkata " },
+    { value: "kolkata", label: "Kolkata " },
+    { value: "kolkata", label: "Kolkata " },
+    { value: "kolkata", label: "Kolkata " },
+    { value: "kolkata", label: "Kolkata " },
   ];
   // ========================================
 
@@ -232,7 +236,7 @@ const CheckIn = () => {
                 <p className="text-center text-gray-700 mb-3 font-medium">
                   Please select your office
                 </p>
-                <div className="grid grid-cols-1 gap-3 max-h-[300px] overflow-y-auto scrollbar-hidden">
+                <div className="grid grid-cols-3 gap-3 max-h-[300px] overflow-y-auto scrollbar-hidden">
                   {offices.map((office) => (
                     <motion.button
                       key={office.value}
